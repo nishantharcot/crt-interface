@@ -4,12 +4,19 @@
   grid-template-columns: 200px 200px 200px;
 }
 
+a {
+  color: lightcoral;
+  background-color: transparent !important;
+  /* text-decoration: none !important; */
+}
+
 /* // for some css stylings */
 body {
-display: flex;
-justify-content: left;
-background-color: black;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  background-color: black;
 }
+
 .box {
 background: #FFFFFF;
 border: 1px solid #555;
@@ -17,4 +24,8 @@ display: flex;
 align-items: center;
 justify-content: center;
 color: #444;
+}
+
+.instructions {
+  color: white;
 }
