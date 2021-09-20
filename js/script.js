@@ -13,6 +13,8 @@ const redo = () => {
     }
 }
 const submit = () => {
+   let ifsubmit = confirm("Would you like to submit your CRT puzzle?")
+    if(ifsubmit)
     html2canvas(document.getElementById("draw")).then((canvas) => {
         console.log("RENDERED", canvas);
         theCanvas = canvas;
@@ -96,3 +98,4 @@ $(document).ready(function () {
         paper.project._activeLayer.lastChild.simplify(20)
     }
 });
+

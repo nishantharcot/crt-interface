@@ -1,50 +1,46 @@
 <!DOCTYPE HTML>
 <html>
-	<head>
-
-		<link rel="stylesheet" href="style.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/hammerjs/2.0.8/hammer.min.js"></script>
-
-
-		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1">
-
-		<script src="js/script.js"></script>
-
-	</head>
-
-	<body>
-
- <div id="main_container">
+   <head>
+      <link rel="stylesheet" href="style.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/hammerjs/2.0.8/hammer.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.0.0-rc.5/dist/html2canvas.min.js"></script>
+      <script src="fontawesome/js/all.js" ></script>
+      <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1, maximum-scale=1" >
+      </meta>
+      <script src="js/script.js"></script>
+   </head>
+   <body>
+      <div id="main_container">
       <div id="container">
-        <div id="puzzleArea" style="position: absolute">
-          <div id="pos1" class="pos"></div>
-          <div id="pos2" class="pos"></div>
-          <div id="pos3" class="pos"></div>
-          <div id="pos4" class="pos"></div>
-          <div id="pos5" class="pos"></div>
-          <div id="pos6" class="pos"></div>
-          <div id="pos7" class="pos"></div>
-          <div id="pos8" class="pos"></div>
-          <div id="pos9" class="pos"></div>
-        </div>
-        <canvas
-          id="draw"
-          style="position: absolute; width: 618px; height: 618px; padding: 4px; left:0"
-          resize
-        ></canvas>
+         <div id="puzzleArea" style="position: absolute">
+            <div id="pos1" class="pos"></div>
+            <div id="pos2" class="pos"></div>
+            <div id="pos3" class="pos"></div>
+            <div id="pos4" class="pos"></div>
+            <div id="pos5" class="pos"></div>
+            <div id="pos6" class="pos"></div>
+            <div id="pos7" class="pos"></div>
+            <div id="pos8" class="pos"></div>
+            <div id="pos9" class="pos"></div>
+         </div>
+         <canvas
+            id="draw"
+            style="position: absolute; width: 618px; height: 618px; padding: 4px; left:0"
+            resize
+            ></canvas>
       </div>
-		<div id="menu">
-			<button class="menuButton red" onclick="undo()"> U </button>
-				<button class="menuButton red" onclick="redo()"> R </button>
-			<button class="menuButton black" onclick="changeColor('black');"></button>
-			<button class="menuButton white" onclick="changeColor('white');"></button>
-			<button class="menuButton plusMinus" onclick="increaseSize();">+</button>
-			<span class="menuButton" id="strokeSize">3</span>
-			<button class="menuButton plusMinus" onclick="decreaseSize();">-</button>
-
-		</div>
-		<script src="js/paper-full.min.js"></script>
-			<script src="js/FileSaver.min.js"></script>
-	</body>
+      <div id="menu">
+         <button class="menuButton red" onclick="undo()"> <i class="fas fa-undo"></i>  </button>
+         <button class="menuButton red" onclick="redo()"> <i class="fas fa-redo"></i>  </button>
+         <button class="menuButton black" onclick="changeColor('black');"><i class="fas fa-pen"></i> </button>
+         <button class="menuButton black" onclick="changeColor('white');"><i class="fas fa-eraser"></i> </button>
+         <button class="menuButton plusMinus" onclick="increaseSize();">+</button>
+         <span class="menuButton" id="strokeSize">3</span>
+         <button class="menuButton plusMinus" onclick="decreaseSize();">-</button>
+         <button class="menuButton green" onclick="submit()"><i class="fas fa-paper-plane"></i>  </button>
+      </div>
+      <script src="js/paper-full.min.js"></script>
+      <script src="js/FileSaver.min.js"></script>
+   </body>
 </html>
